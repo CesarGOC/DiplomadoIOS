@@ -1,7 +1,7 @@
 #README
 
 
-here goes my note for the ´Diplomado de Aplicaciones mMoviles´.
+Here goes my notes and exercisesfor the ´Diplomado de Aplicaciones mMoviles´.
 
 ##Firts Module
 - MacOS

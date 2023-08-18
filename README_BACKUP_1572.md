@@ -4,6 +4,10 @@
 Here goes my notes and exercises for the ´Diplomado de Aplicaciones mMoviles´.
 
 ##Firts Module
-- MacOS - A cool OD and We learned some cool shortcuts
+<<<<<<< HEAD
+- MacOS - We learned some coll shortcuts
+=======
+- MacOS - A cool OS
+>>>>>>> update_module_topic
 - Constans and variables
 - Numbers

@@ -64,23 +64,67 @@ func areaOfTrinaguleWith(base: Double, height:Double)-> Double{
 print(areaOfTrinaguleWith(base: 3, height: 5))
 
 
-func sortedEvenOddNumbers(_ numbers: [Int]) -> (evens:[Int], odd: [Int]){
-    var evens = [Int]()
-    var odds = [Int]()
-    
-    for number in numbers{
-        if number % 2 == 0{
-            evens.append(number)
-        }else{
-            odds.append(number)
-        }
-    }
-    return (evens: evens, odd: odds)
-}
+//func sortedEvenOddNumbers(_ numbers: [Int]) -> (evens:[Int], odd: [Int]){
+//    var evens = [Int]()
+//    var odds = [Int]()
+//
+//    for number in numbers{
+//        if number % 2 == 0{
+//            evens.append(number)
+//        }else{
+//            odds.append(number)
+//        }
+//    }
+//    return (evens: evens, odd: odds)
+//}
 
 let aBuchOfNumbers = [23,45,10,3,2,45,79,8,32,78,9]
 let sortedEvenAndOddNumbers = sortedEvenOddNumbers(aBuchOfNumbers)
 print("The even numbers are: \(sortedEvenAndOddNumbers.evens)")
 print("The odd numbers are: \(sortedEvenAndOddNumbers.odd)")
+
+
+//Opcionals
+func grabMiddleName(fullName name: (first: String, middle: String?, last: String)) -> String?{
+    return name.middle
+    
+}
+
+let middleName = grabMiddleName(fullName: (first: "Cesar", middle: nil, last: "Guadarrama"))
+if let middleName = middleName{
+    print(middleName)
+}
+
+
+//Como terminar antes una funcion
+func greetByMiddleName(fromfullName name: (firts: String, middle: String?, last: String), age: Int){
+    
+    guard let middleName = name.middle, age > 18 else {
+        print("Hey there..!!")
+        return
+    }
+    print("Hey \(middleName)")
+  
+}
+
+greetByMiddleName(fromfullName: (firts: "Cesar", middle: "Alejandro", last: "Guadarrama"), age: 19)
+
+
+func sortedEvenOddNumbers(_ numbers: [Int]) -> (evens:[Int], odd: [Int]){
+//    var evens = [Int]()
+//    var odds = [Int]()
+//
+//    for number in numbers{
+//        if number % 2 == 0{
+//            evens.append(number)
+//        }else{
+//            odds.append(number)
+//        }
+//    }
+    return (evens: [], odd: [])
+}
+
+//let myFunction: ([Int]) -> ([Int], [Int]) = sortedEvenAndOddNumbers
+//myFunction([])
 
 //: [Next](@next)

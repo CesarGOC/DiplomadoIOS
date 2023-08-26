@@ -3,5 +3,6 @@
     <pages>
         <page name='Funciones'/>
         <page name='Struct'/>
+        <page name='Closures'/>
     </pages>
 </playground>

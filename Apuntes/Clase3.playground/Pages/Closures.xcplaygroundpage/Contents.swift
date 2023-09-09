@@ -84,7 +84,7 @@ print(roundedVolunteers)
 let passingVolunteers = roundedVolunteers.filter{number in
     return number>=10 }
 
-print(passingVolunteers)
+print("filter \(passingVolunteers)")
 
 
 //Funcion reduce, retorna un unico valor

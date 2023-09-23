@@ -5,7 +5,7 @@ var dado = 0
 let tablero: [Int] = Array(1...24)
 var lugar: Int = 0
 
-func tirada(dado: Int){
+func tirada(diceRolls: [Int]){
     lugar += dado
     switch lugar {
         //escaleras

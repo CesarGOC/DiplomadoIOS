@@ -12,6 +12,13 @@ class ShareViewController: UIViewController {
     @IBOutlet weak var textView: UITextView!{ didSet{
         textView.delegate = self
     }}
+    
+    @IBAction func shareButton(_ sender: UIButton) {
+        print(textView.text ?? "")
+    }
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

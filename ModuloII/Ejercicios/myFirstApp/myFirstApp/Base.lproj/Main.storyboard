@@ -240,13 +240,24 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="opo-6N-hSp">
+                                <rect key="frame" x="98.333333333333329" y="587.33333333333337" width="196.33333333333337" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Share"/>
+                                <connections>
+                                    <action selector="shareButton:" destination="ziP-z6-TpS" eventType="touchUpInside" id="zGJ-NT-lV7"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="uxN-Hs-UWK"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="opo-6N-hSp" firstAttribute="centerX" secondItem="uxN-Hs-UWK" secondAttribute="centerX" id="8Na-IT-1wX"/>
+                            <constraint firstItem="opo-6N-hSp" firstAttribute="width" secondItem="9tK-Gr-duA" secondAttribute="width" multiplier="0.5" id="SPr-Ck-soQ"/>
                             <constraint firstItem="0U5-Kh-i7Z" firstAttribute="height" secondItem="9tK-Gr-duA" secondAttribute="height" multiplier="0.3" id="UOx-bB-eQf"/>
                             <constraint firstItem="0U5-Kh-i7Z" firstAttribute="centerX" secondItem="uxN-Hs-UWK" secondAttribute="centerX" id="dBf-mC-GfN"/>
                             <constraint firstItem="0U5-Kh-i7Z" firstAttribute="width" secondItem="9tK-Gr-duA" secondAttribute="width" multiplier="0.9" id="eeI-EE-zTL"/>
+                            <constraint firstItem="opo-6N-hSp" firstAttribute="top" secondItem="0U5-Kh-i7Z" secondAttribute="bottom" constant="40" id="pG7-zz-4qe"/>
                             <constraint firstItem="0U5-Kh-i7Z" firstAttribute="centerY" secondItem="uxN-Hs-UWK" secondAttribute="centerY" id="zR6-kh-m7Y"/>
                         </constraints>
                     </view>
@@ -306,16 +317,16 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray4Color">
-            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPinkColor">
-            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemTealColor">
-            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.18823529410000001" green="0.69019607839999997" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

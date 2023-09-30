@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		551965CD2AC7892600700AB4 /* ImageStackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551965CC2AC7892600700AB4 /* ImageStackViewController.swift */; };
+		551965D12AC7C32800700AB4 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551965D02AC7C32800700AB4 /* ShareViewController.swift */; };
 		DB7874FB2ABE67F00050CEEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7874FA2ABE67F00050CEEB /* AppDelegate.swift */; };
 		DB7874FD2ABE67F00050CEEB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7874FC2ABE67F00050CEEB /* SceneDelegate.swift */; };
 		DB7874FF2ABE67F00050CEEB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7874FE2ABE67F00050CEEB /* ViewController.swift */; };
@@ -36,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		551965CC2AC7892600700AB4 /* ImageStackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStackViewController.swift; sourceTree = "<group>"; };
+		551965D02AC7C32800700AB4 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		DB7874F72ABE67F00050CEEB /* myFirstApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myFirstApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB7874FA2ABE67F00050CEEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB7874FC2ABE67F00050CEEB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +106,8 @@
 				DB7874FA2ABE67F00050CEEB /* AppDelegate.swift */,
 				DB7874FC2ABE67F00050CEEB /* SceneDelegate.swift */,
 				DB7874FE2ABE67F00050CEEB /* ViewController.swift */,
+				551965CC2AC7892600700AB4 /* ImageStackViewController.swift */,
+				551965D02AC7C32800700AB4 /* ShareViewController.swift */,
 				DB7875002ABE67F00050CEEB /* Main.storyboard */,
 				DB7875032ABE67F20050CEEB /* Assets.xcassets */,
 				DB7875052ABE67F20050CEEB /* LaunchScreen.storyboard */,
@@ -191,7 +197,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 1500;
 				TargetAttributes = {
 					DB7874F62ABE67F00050CEEB = {
 						CreatedOnToolsVersion = 14.3;
@@ -259,6 +265,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB7874FF2ABE67F00050CEEB /* ViewController.swift in Sources */,
+				551965CD2AC7892600700AB4 /* ImageStackViewController.swift in Sources */,
+				551965D12AC7C32800700AB4 /* ShareViewController.swift in Sources */,
 				DB7874FB2ABE67F00050CEEB /* AppDelegate.swift in Sources */,
 				DB7874FD2ABE67F00050CEEB /* SceneDelegate.swift in Sources */,
 			);
@@ -320,6 +328,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -352,6 +361,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -380,6 +390,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -412,6 +423,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;

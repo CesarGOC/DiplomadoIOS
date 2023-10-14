@@ -28,5 +28,10 @@ class ImageStackViewController: UIViewController {
             thirdCaptionedImage.setContent(image: "porsche3", caption: "porsche3")
         }
     }
+    
+    @IBAction func segueToShare(_ sender: UIBarButtonItem){
+        let shareViewController = ShareViewController()
+        present(shareViewController, animated: true)
+    }
 
 }

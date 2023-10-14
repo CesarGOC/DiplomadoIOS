@@ -96,7 +96,7 @@
                     <navigationItem key="navigationItem" id="l6d-F8-c0Y">
                         <barButtonItem key="rightBarButtonItem" image="square.and.arrow.up.fill" catalog="system" id="AWz-gk-DrV">
                             <connections>
-                                <segue destination="ziP-z6-TpS" kind="presentation" id="bWH-S9-cF4"/>
+                                <action selector="segueToShare:" destination="TDn-L9-2Th" id="6S0-mt-RJa"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -109,50 +109,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1zv-kq-2da" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1892.3664122137404" y="693.66197183098598"/>
-        </scene>
-        <!--Share View Controller-->
-        <scene sceneID="tQE-RQ-S41">
-            <objects>
-                <viewController id="ziP-z6-TpS" customClass="ShareViewController" customModule="myFirstApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="9tK-Gr-duA">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0U5-Kh-i7Z">
-                                <rect key="frame" x="19.666666666666657" y="294.66666666666669" width="353.66666666666674" height="252.66666666666669"/>
-                                <color key="backgroundColor" systemColor="scrollViewTexturedBackgroundColor"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="opo-6N-hSp">
-                                <rect key="frame" x="98.333333333333329" y="587.33333333333337" width="196.33333333333337" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Share"/>
-                                <connections>
-                                    <action selector="shareButton:" destination="ziP-z6-TpS" eventType="touchUpInside" id="zGJ-NT-lV7"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="uxN-Hs-UWK"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="opo-6N-hSp" firstAttribute="centerX" secondItem="uxN-Hs-UWK" secondAttribute="centerX" id="8Na-IT-1wX"/>
-                            <constraint firstItem="opo-6N-hSp" firstAttribute="width" secondItem="9tK-Gr-duA" secondAttribute="width" multiplier="0.5" id="SPr-Ck-soQ"/>
-                            <constraint firstItem="0U5-Kh-i7Z" firstAttribute="height" secondItem="9tK-Gr-duA" secondAttribute="height" multiplier="0.3" id="UOx-bB-eQf"/>
-                            <constraint firstItem="0U5-Kh-i7Z" firstAttribute="centerX" secondItem="uxN-Hs-UWK" secondAttribute="centerX" id="dBf-mC-GfN"/>
-                            <constraint firstItem="0U5-Kh-i7Z" firstAttribute="width" secondItem="9tK-Gr-duA" secondAttribute="width" multiplier="0.9" id="eeI-EE-zTL"/>
-                            <constraint firstItem="opo-6N-hSp" firstAttribute="top" secondItem="0U5-Kh-i7Z" secondAttribute="bottom" constant="40" id="pG7-zz-4qe"/>
-                            <constraint firstItem="0U5-Kh-i7Z" firstAttribute="centerY" secondItem="uxN-Hs-UWK" secondAttribute="centerY" id="zR6-kh-m7Y"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="textView" destination="0U5-Kh-i7Z" id="bSj-EQ-NPo"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pNw-ye-DVa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2712" y="694"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tSq-f7-K3O">
@@ -173,9 +129,6 @@
     </scenes>
     <resources>
         <image name="square.and.arrow.up.fill" catalog="system" width="115" height="128"/>
-        <systemColor name="scrollViewTexturedBackgroundColor">
-            <color red="0.43529411764705883" green="0.44313725490196076" blue="0.47450980392156861" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

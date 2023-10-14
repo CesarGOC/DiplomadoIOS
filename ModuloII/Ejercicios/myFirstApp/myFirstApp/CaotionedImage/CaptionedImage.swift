@@ -26,7 +26,11 @@ class CaptionedImage: UIView {
     }
     
     private func setUpView(){
-        guard let contentView = Bundle.main.loadNibNamed("CaptionedImage", owner: self)?.first as? UIView else {return}
+        //Segunda forma
+//        guard let contentView = Bundle.main.loadNibNamed("CaptionedImage", owner: self)?.first as? UIView else {return}
+        
+        //Tercera forma
+        guard let contentView = UINib(nibName: "CaptionedImage", bundle: nil).instantiate(withOwner: self).first as? UIView else{return}
         contentView.translatesAutoresizingMaskIntoConstraints = false
         addSubview(contentView)
         topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true

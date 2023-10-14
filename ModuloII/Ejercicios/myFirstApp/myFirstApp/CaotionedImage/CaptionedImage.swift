@@ -13,7 +13,7 @@ class CaptionedImage: UIView {
     @IBOutlet weak var imageView: UIImageView!
     
     
-    @IBOutlet weak var contenView: UIView!
+
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -26,12 +26,12 @@ class CaptionedImage: UIView {
     }
     
     private func setUpView(){
-        Bundle.main.loadNibNamed("CaptionedImage", owner: self)
-        contenView.translatesAutoresizingMaskIntoConstraints = false
-        addSubview(contenView)
-        topAnchor.constraint(equalTo: contenView.topAnchor).isActive = true
-        bottomAnchor.constraint(equalTo: contenView.bottomAnchor).isActive = true
-        leftAnchor.constraint(equalTo: contenView.leftAnchor).isActive = true
-        rightAnchor.constraint(equalTo: contenView.rightAnchor).isActive = true
+        guard let contentView = Bundle.main.loadNibNamed("CaptionedImage", owner: self)?.first as? UIView else {return}
+        contentView.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(contentView)
+        topAnchor.constraint(equalTo: contentView.topAnchor).isActive = true
+        bottomAnchor.constraint(equalTo: contentView.bottomAnchor).isActive = true
+        leftAnchor.constraint(equalTo: contentView.leftAnchor).isActive = true
+        rightAnchor.constraint(equalTo: contentView.rightAnchor).isActive = true
     }
 }

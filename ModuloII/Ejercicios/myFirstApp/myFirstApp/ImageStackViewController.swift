@@ -19,16 +19,13 @@ class ImageStackViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         if showCats {
-            firstCaptionedImage.imageView.image  = UIImage(named: "images-2")
-            firstCaptionedImage.captionLabel.text = "images-2"
-            secondCaptionedImage.imageView.image = UIImage(named: "images-3")
-            //firstCaptionedImage.captionLabel.text = "images-3"
-            thirdCaptionedImage.imageView.image = UIImage(named: "images-4")
-            //firstCaptionedImage.captionLabel.text = "images-4"
+            firstCaptionedImage.setContent(image: "images-2", caption: "images-2")
+            secondCaptionedImage.setContent(image: "images-3", caption: "images-3")
+            thirdCaptionedImage.setContent(image: "images-4", caption: "images-4")
         }else{
-            firstCaptionedImage.imageView.image  = UIImage(named: "porsche2")
-            secondCaptionedImage.imageView.image = UIImage(named: "porsche")
-            thirdCaptionedImage.imageView.image = UIImage(named: "porsche3")
+            firstCaptionedImage.setContent(image: "porsche2", caption: "porsche2")
+            secondCaptionedImage.setContent(image: "porsche", caption: nil)
+            thirdCaptionedImage.setContent(image: "porsche3", caption: "porsche3")
         }
     }
 

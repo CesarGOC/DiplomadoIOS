@@ -25,6 +25,14 @@ class CaptionedImage: UIView {
         setUpView()
     }
     
+    
+    func setContent(image:String, caption: String?){
+        captionLabel.text = caption
+        captionLabel.isHidden = caption == nil
+        
+        imageView.image = UIImage(named: image)
+    }
+    
     private func setUpView(){
         //Segunda forma
 //        guard let contentView = Bundle.main.loadNibNamed("CaptionedImage", owner: self)?.first as? UIView else {return}

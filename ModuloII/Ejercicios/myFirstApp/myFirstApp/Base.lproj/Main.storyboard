@@ -184,28 +184,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="axn-0C-YOH">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="i6h-a3-kW1">
                                 <rect key="frame" x="0.0" y="103" width="393" height="715"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="images-2" translatesAutoresizingMaskIntoConstraints="NO" id="7Sr-Lx-1kH">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="233"/>
-                                    </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="images-3" translatesAutoresizingMaskIntoConstraints="NO" id="zAW-pj-aZx">
-                                        <rect key="frame" x="0.0" y="241" width="393" height="233"/>
-                                    </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="images-4" translatesAutoresizingMaskIntoConstraints="NO" id="ARV-7M-aga">
-                                        <rect key="frame" x="0.0" y="482" width="393" height="233"/>
-                                    </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SlJ-dk-5dV" customClass="CaptionedImage" customModule="myFirstApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="238.33333333333334"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1oD-hB-D2H" customClass="CaptionedImage" customModule="myFirstApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="238.33333333333331" width="393" height="238.33333333333331"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6eV-cj-zu1" customClass="CaptionedImage" customModule="myFirstApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="476.66666666666657" width="393" height="238.33333333333331"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="b2V-xn-qmj"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="axn-0C-YOH" firstAttribute="leading" secondItem="b2V-xn-qmj" secondAttribute="leading" id="M2f-gd-D6K"/>
-                            <constraint firstItem="axn-0C-YOH" firstAttribute="top" secondItem="b2V-xn-qmj" secondAttribute="top" id="S0a-ys-dxl"/>
-                            <constraint firstItem="b2V-xn-qmj" firstAttribute="trailing" secondItem="axn-0C-YOH" secondAttribute="trailing" id="ar5-4o-7uR"/>
-                            <constraint firstItem="b2V-xn-qmj" firstAttribute="bottom" secondItem="axn-0C-YOH" secondAttribute="bottom" id="zji-Xe-Tw6"/>
+                            <constraint firstItem="b2V-xn-qmj" firstAttribute="bottom" secondItem="i6h-a3-kW1" secondAttribute="bottom" id="Jtx-5W-zuG"/>
+                            <constraint firstItem="b2V-xn-qmj" firstAttribute="trailing" secondItem="i6h-a3-kW1" secondAttribute="trailing" id="Tka-10-dtR"/>
+                            <constraint firstItem="i6h-a3-kW1" firstAttribute="top" secondItem="b2V-xn-qmj" secondAttribute="top" id="gb9-GA-KbS"/>
+                            <constraint firstItem="i6h-a3-kW1" firstAttribute="leading" secondItem="b2V-xn-qmj" secondAttribute="leading" id="hVV-cj-TOJ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="l6d-F8-c0Y">
@@ -216,9 +219,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="firstImageView" destination="7Sr-Lx-1kH" id="Quq-jz-ftX"/>
-                        <outlet property="secondImageView" destination="zAW-pj-aZx" id="v0a-Dm-v2l"/>
-                        <outlet property="threeImageView" destination="ARV-7M-aga" id="U7F-FO-r50"/>
+                        <outlet property="firstCaptionedImage" destination="SlJ-dk-5dV" id="IQR-qN-KqT"/>
+                        <outlet property="secondCaptionedImage" destination="1oD-hB-D2H" id="kBZ-Qk-nyQ"/>
+                        <outlet property="thirdCaptionedImage" destination="6eV-cj-zu1" id="z5V-KY-CuE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1zv-kq-2da" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -306,9 +309,6 @@
     </scenes>
     <resources>
         <image name="camera.fill" catalog="system" width="128" height="93"/>
-        <image name="images-2" width="287" height="175"/>
-        <image name="images-3" width="275" height="183"/>
-        <image name="images-4" width="360" height="140"/>
         <image name="square.and.arrow.up.fill" catalog="system" width="115" height="128"/>
         <systemColor name="scrollViewTexturedBackgroundColor">
             <color red="0.43529411764705883" green="0.44313725490196076" blue="0.47450980392156861" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -10,22 +10,25 @@ import UIKit
 class ImageStackViewController: UIViewController {
     
     var showCats = false
-    @IBOutlet weak var firstImageView: UIImageView!
+    @IBOutlet weak var firstCaptionedImage: CaptionedImage!
 
-    @IBOutlet weak var secondImageView: UIImageView!
+    @IBOutlet weak var secondCaptionedImage: CaptionedImage!
     
-    @IBOutlet weak var threeImageView: UIImageView!
+    @IBOutlet weak var thirdCaptionedImage: CaptionedImage!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         if showCats {
-            firstImageView.image  = UIImage(named: "images-2")
-            secondImageView.image = UIImage(named: "images-3")
-            threeImageView.image = UIImage(named: "images-4")
+            firstCaptionedImage.imageView.image  = UIImage(named: "images-2")
+            firstCaptionedImage.captionLabel.text = "images-2"
+            secondCaptionedImage.imageView.image = UIImage(named: "images-3")
+            //firstCaptionedImage.captionLabel.text = "images-3"
+            thirdCaptionedImage.imageView.image = UIImage(named: "images-4")
+            //firstCaptionedImage.captionLabel.text = "images-4"
         }else{
-            firstImageView.image  = UIImage(named: "porsche2")
-            secondImageView.image = UIImage(named: "porsche")
-            threeImageView.image = UIImage(named: "porsche3")
+            firstCaptionedImage.imageView.image  = UIImage(named: "porsche2")
+            secondCaptionedImage.imageView.image = UIImage(named: "porsche")
+            thirdCaptionedImage.imageView.image = UIImage(named: "porsche3")
         }
     }
 

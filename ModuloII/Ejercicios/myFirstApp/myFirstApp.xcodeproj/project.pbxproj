@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		551965CD2AC7892600700AB4 /* ImageStackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551965CC2AC7892600700AB4 /* ImageStackViewController.swift */; };
 		551965D12AC7C32800700AB4 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551965D02AC7C32800700AB4 /* ShareViewController.swift */; };
+		55875A112AD9FBBA00FFE578 /* CaptionedImage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55875A102AD9FBBA00FFE578 /* CaptionedImage.xib */; };
+		55875A132AD9FE6900FFE578 /* CaptionedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55875A122AD9FE6900FFE578 /* CaptionedImage.swift */; };
 		DB7874FB2ABE67F00050CEEB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7874FA2ABE67F00050CEEB /* AppDelegate.swift */; };
 		DB7874FD2ABE67F00050CEEB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7874FC2ABE67F00050CEEB /* SceneDelegate.swift */; };
 		DB7874FF2ABE67F00050CEEB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7874FE2ABE67F00050CEEB /* ViewController.swift */; };
@@ -40,6 +42,8 @@
 /* Begin PBXFileReference section */
 		551965CC2AC7892600700AB4 /* ImageStackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStackViewController.swift; sourceTree = "<group>"; };
 		551965D02AC7C32800700AB4 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
+		55875A102AD9FBBA00FFE578 /* CaptionedImage.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CaptionedImage.xib; sourceTree = "<group>"; };
+		55875A122AD9FE6900FFE578 /* CaptionedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptionedImage.swift; sourceTree = "<group>"; };
 		DB7874F72ABE67F00050CEEB /* myFirstApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myFirstApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB7874FA2ABE67F00050CEEB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB7874FC2ABE67F00050CEEB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +84,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		55875A142AD9FE8000FFE578 /* CaotionedImage */ = {
+			isa = PBXGroup;
+			children = (
+				55875A102AD9FBBA00FFE578 /* CaptionedImage.xib */,
+				55875A122AD9FE6900FFE578 /* CaptionedImage.swift */,
+			);
+			path = CaotionedImage;
+			sourceTree = "<group>";
+		};
 		DB7874EE2ABE67F00050CEEB = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +125,7 @@
 				DB7875032ABE67F20050CEEB /* Assets.xcassets */,
 				DB7875052ABE67F20050CEEB /* LaunchScreen.storyboard */,
 				DB7875082ABE67F20050CEEB /* Info.plist */,
+				55875A142AD9FE8000FFE578 /* CaotionedImage */,
 			);
 			path = myFirstApp;
 			sourceTree = "<group>";
@@ -239,6 +253,7 @@
 			files = (
 				DB7875072ABE67F20050CEEB /* LaunchScreen.storyboard in Resources */,
 				DB7875042ABE67F20050CEEB /* Assets.xcassets in Resources */,
+				55875A112AD9FBBA00FFE578 /* CaptionedImage.xib in Resources */,
 				DB7875022ABE67F00050CEEB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -269,6 +284,7 @@
 				551965D12AC7C32800700AB4 /* ShareViewController.swift in Sources */,
 				DB7874FB2ABE67F00050CEEB /* AppDelegate.swift in Sources */,
 				DB7874FD2ABE67F00050CEEB /* SceneDelegate.swift in Sources */,
+				55875A132AD9FE6900FFE578 /* CaptionedImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

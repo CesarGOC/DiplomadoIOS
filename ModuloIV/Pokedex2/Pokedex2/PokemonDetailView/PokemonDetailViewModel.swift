@@ -21,6 +21,8 @@ class PokemonDetailViewModel{
     var pokemonWeight: String{pokemon.weight}
     var pokemonWeaknesses: [String]{pokemon.weaknesses}
     
+    let locationButton: String = "View Pokemon Location"
+    
     weak var delegate : PokemonDetailViewModelDelegate?
     
     

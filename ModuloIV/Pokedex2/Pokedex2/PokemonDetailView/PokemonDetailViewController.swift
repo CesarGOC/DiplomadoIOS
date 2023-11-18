@@ -66,6 +66,16 @@ class PokemonDetailViewController: UIViewController {
         return label
     }()
     
+    private lazy var pokemonLocationButton: UIButton = {
+        var buttonConfiguration = UIButton.Configuration.filled()
+        buttonConfiguration.title = viewModel.locationButton
+        
+        let pokemonLocationButton = UIButton(configuration: buttonConfiguration)
+        pokemonLocationButton.addTarget(self, action:#selector (pokemonLocationButtonPresset), for: .touchUpInside)
+        
+        return pokemonLocationButton
+    }()
+    
     
     
     init(pokemon: Pokemon){
@@ -86,18 +96,9 @@ class PokemonDetailViewController: UIViewController {
         
     }
     
-    func stackWeakness(){
-//        for element in viewModel.pokemonWeaknesses{
-//            lazy var pokemonWeaknessLabel: UILabel = {
-//            let label = UILabel()
-//            label.translatesAutoresizingMaskIntoConstraints = false
-//            label.font = UIFont.preferredFont(forTextStyle: .title1)
-//            label.adjustsFontForContentSizeCategory = true
-//            label.text = "Weight: " + element
-//            return label
-//            }()
-//            pokemonWeaknessStackView.addArrangedSubview(pokemonWeaknessLabel)
-//        }
+    @objc func pokemonLocationButtonPresset(){
+        let pokemonLocationViewController = PokemonLocationViewController()
+        present(pokemonLocationViewController, animated: true)
     }
     
     private func setupView(){
@@ -139,7 +140,7 @@ class PokemonDetailViewController: UIViewController {
         let pokemonWeaknessStackView = UIStackView()
         pokemonWeaknessStackView.translatesAutoresizingMaskIntoConstraints = false
         pokemonWeaknessStackView.axis = .vertical
-        pokemonWeaknessStackView.spacing = 5
+        pokemonWeaknessStackView.spacing = 10
         pokemonWeaknessStackView.distribution = .fillEqually
         
         for element in viewModel.pokemonWeaknesses{
@@ -158,13 +159,14 @@ class PokemonDetailViewController: UIViewController {
         pokemonInfoStackView.translatesAutoresizingMaskIntoConstraints = false
         pokemonInfoStackView.axis = .vertical
         pokemonInfoStackView.spacing = 16
-        pokemonInfoStackView.distribution = .fillProportionally
+        pokemonInfoStackView.distribution = .fillEqually
         
         pokemonInfoStackView.addArrangedSubview(pokemonImageView)
         pokemonInfoStackView.addArrangedSubview(pokemonNumberLabel)
         pokemonInfoStackView.addArrangedSubview(pokemonHeightLabel)
         pokemonInfoStackView.addArrangedSubview(pokemonWeightLabel)
         pokemonInfoStackView.addArrangedSubview(pokemonWeaknessStackView)
+        pokemonInfoStackView.addArrangedSubview(pokemonLocationButton)
         
         contentView.addSubview(pokemonInfoStackView)
         

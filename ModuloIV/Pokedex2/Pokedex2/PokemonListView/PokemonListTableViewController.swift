@@ -9,21 +9,38 @@ import UIKit
 
 class PokemonListTableViewController: UITableViewController {
     let viewModel: PokemonViewListModel = PokemonViewListModel()
-    
+    let searchBarController = UISearchController(searchResultsController: nil)
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Table View register
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: viewModel.pokemonCellIdentifier)
+        //title navigation controller
         title = viewModel.title
         navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationItem.searchController = searchBarController
+        
+        //Searchbar
+        //searchBar.searchResultsController.placeholder = "Buscar"
+        searchBarController.searchBar.delegate = self
+        searchBarController.hidesNavigationBarDuringPresentation = false
+        searchBarController.obscuresBackgroundDuringPresentation = false
+        searchBarController.searchBar.placeholder = viewModel.searchBarPlaceholder
+        // Agrega la barra de búsqueda a la vista de la tabla
+        navigationItem.searchController = searchBarController
+        
+        viewModel.delegate = self
     }
 
 
 
 }
 
+
+// MARK: - Table view data source
 extension PokemonListTableViewController{
-    // MARK: - Table view data source
+
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
@@ -57,5 +74,22 @@ extension PokemonListTableViewController{
         let pokemon = viewModel.pokemon(at: indexPath)
         let pokemonDetailViewController = PokemonDetailViewController(pokemon: pokemon)
         navigationController?.pushViewController(pokemonDetailViewController, animated: true)
+    }
+}
+
+
+extension PokemonListTableViewController: UISearchBarDelegate,UISearchControllerDelegate{
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        viewModel.filterPokemon(with: searchText)
+
+    }
+
+   
+}
+
+
+extension PokemonListTableViewController: PokemonListViewModelDelegate{
+    func shouldReloadTableData() {
+        tableView.reloadData()
     }
 }

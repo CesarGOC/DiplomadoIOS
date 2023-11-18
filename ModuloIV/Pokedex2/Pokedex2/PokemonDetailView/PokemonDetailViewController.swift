@@ -44,9 +44,29 @@ class PokemonDetailViewController: UIViewController {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.preferredFont(forTextStyle: .title1)
         label.adjustsFontForContentSizeCategory = true
-        label.text = viewModel.pokemonNumber
+        label.text = "Number: " + viewModel.pokemonNumber
         return label
     }()
+    
+    private lazy var pokemonHeightLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = UIFont.preferredFont(forTextStyle: .title1)
+        label.adjustsFontForContentSizeCategory = true
+        label.text = "Height: " + viewModel.pokemonHeight
+        return label
+    }()
+    
+    private lazy var pokemonWeightLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = UIFont.preferredFont(forTextStyle: .title1)
+        label.adjustsFontForContentSizeCategory = true
+        label.text = "Weight: " + viewModel.pokemonHeight
+        return label
+    }()
+    
+    
     
     init(pokemon: Pokemon){
         self.viewModel = PokemonDetailViewModel(pokemon: pokemon)
@@ -64,6 +84,20 @@ class PokemonDetailViewController: UIViewController {
         super.viewDidLoad()
         setupView()
         
+    }
+    
+    func stackWeakness(){
+//        for element in viewModel.pokemonWeaknesses{
+//            lazy var pokemonWeaknessLabel: UILabel = {
+//            let label = UILabel()
+//            label.translatesAutoresizingMaskIntoConstraints = false
+//            label.font = UIFont.preferredFont(forTextStyle: .title1)
+//            label.adjustsFontForContentSizeCategory = true
+//            label.text = "Weight: " + element
+//            return label
+//            }()
+//            pokemonWeaknessStackView.addArrangedSubview(pokemonWeaknessLabel)
+//        }
     }
     
     private func setupView(){
@@ -102,6 +136,24 @@ class PokemonDetailViewController: UIViewController {
             
         ])
         
+        let pokemonWeaknessStackView = UIStackView()
+        pokemonWeaknessStackView.translatesAutoresizingMaskIntoConstraints = false
+        pokemonWeaknessStackView.axis = .vertical
+        pokemonWeaknessStackView.spacing = 5
+        pokemonWeaknessStackView.distribution = .fillEqually
+        
+        for element in viewModel.pokemonWeaknesses{
+            lazy var pokemonWeaknessLabel: UILabel = {
+            let label = UILabel()
+            label.translatesAutoresizingMaskIntoConstraints = false
+            label.font = UIFont.preferredFont(forTextStyle: .title1)
+            label.adjustsFontForContentSizeCategory = true
+            label.text = "Weakness: " + element
+            return label
+            }()
+            pokemonWeaknessStackView.addArrangedSubview(pokemonWeaknessLabel)
+        }
+        
         let pokemonInfoStackView = UIStackView()
         pokemonInfoStackView.translatesAutoresizingMaskIntoConstraints = false
         pokemonInfoStackView.axis = .vertical
@@ -110,6 +162,9 @@ class PokemonDetailViewController: UIViewController {
         
         pokemonInfoStackView.addArrangedSubview(pokemonImageView)
         pokemonInfoStackView.addArrangedSubview(pokemonNumberLabel)
+        pokemonInfoStackView.addArrangedSubview(pokemonHeightLabel)
+        pokemonInfoStackView.addArrangedSubview(pokemonWeightLabel)
+        pokemonInfoStackView.addArrangedSubview(pokemonWeaknessStackView)
         
         contentView.addSubview(pokemonInfoStackView)
         

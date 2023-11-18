@@ -17,6 +17,9 @@ class PokemonDetailViewModel{
     
     var pokemonName: String{ pokemon.name }
     var pokemonNumber: String{pokemon.number}
+    var pokemonHeight: String{pokemon.height}
+    var pokemonWeight: String{pokemon.weight}
+    var pokemonWeaknesses: [String]{pokemon.weaknesses}
     
     weak var delegate : PokemonDetailViewModelDelegate?
     

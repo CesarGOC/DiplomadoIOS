@@ -7,18 +7,25 @@
 
 import Foundation
 
+protocol PokemonListViewModelDelegate: AnyObject{
+    func shouldReloadTableData()
+}
+
 
 class PokemonViewListModel{
     private let fileName = "pokemon_list"
     private let fileExtension = "json"
     
-    
+    private var filtrerPokemonList: [Pokemon] = []
     private var pokemonList: [Pokemon] = []
     
     let pokemonCellIdentifier = "pokemonCell"
+    let searchBarPlaceholder = "Search"
     
     let numberOfSections: Int = 1
-    var numberOfRows: Int{pokemonList.count}
+    var numberOfRows: Int{filtrerPokemonList.count}
+    
+    weak var delegate: (PokemonListViewModelDelegate)?
     
     let title = "Pokedex"
     
@@ -28,8 +35,10 @@ class PokemonViewListModel{
     }
     
     func pokemon(at indexPath: IndexPath)->Pokemon{
-        return pokemonList[indexPath.row]
+        return filtrerPokemonList[indexPath.row]
     }
+    
+    
     
     private func loadData(){
         guard let fileURL = Bundle.main.url(forResource: fileName, 
@@ -42,6 +51,24 @@ class PokemonViewListModel{
             return
         }
         self.pokemonList = pokemonList
+        self.filtrerPokemonList = pokemonList
+    }
+    
+    
+    func filterPokemon(with searchText: String){
+        defer{
+            delegate?.shouldReloadTableData()
+        }
+        guard !searchText.isEmpty else {
+            filtrerPokemonList = pokemonList
+            return
+        }
+        
+        filtrerPokemonList = pokemonList.filter{
+            $0.name.lowercased().contains(searchText.lowercased()) ||
+            $0.number.lowercased().contains(searchText.lowercased())
+        }
+        delegate?.shouldReloadTableData()
     }
 }
 

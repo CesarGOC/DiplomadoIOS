@@ -10,6 +10,7 @@ import CoreLocation
 
 protocol PokemonLocationViewModelDelegate: AnyObject{
     func updateUserLocation(with coordinate: CLLocationCoordinate2D)
+    func shoulShowPermitionAlert()
 }
 
 class PokemonLocationViewModel: NSObject{
@@ -30,11 +31,19 @@ class PokemonLocationViewModel: NSObject{
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
+        
+        
     }
 }
 
 
 extension PokemonLocationViewModel: CLLocationManagerDelegate{
+    
+    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+        if manager.authorizationStatus == .denied{
+            delegate?.shoulShowPermitionAlert()
+        }
+    }
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let currenLocation = locations.last else{return}
         
@@ -47,4 +56,7 @@ extension PokemonLocationViewModel: CLLocationManagerDelegate{
 //        
 //        mapView.region = mapRegion
     }
+    
+    
+    
 }

@@ -75,6 +75,7 @@ class PokemonLocationViewController: UIViewController {
 
 extension PokemonLocationViewController: PokemonLocationViewModelDelegate{
     func updateUserLocation(with coordinate: CLLocationCoordinate2D) {
+        
         let userLocationPin = MKPointAnnotation()
         userLocationPin.coordinate = coordinate
         mapView.addAnnotation(userLocationPin)
@@ -83,6 +84,14 @@ extension PokemonLocationViewController: PokemonLocationViewModelDelegate{
         
         mapView.region = mapRegion
     }
+    
+    func shoulShowPermitionAlert() {
+        let alert = UIAlertController(title: "Localitation Permission", message: "Please update the location permission in settings", preferredStyle: .alert)
+        let dismissAction = UIAlertAction(title: "Ok", style: .default){
+            in
+        }
+    }
+    
 }
 
 

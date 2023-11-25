@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "1FC1426D-CB90-4453-AE4E-17D0391980AC"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "71B7D664-580F-47D4-BCD7-3FEBB73A1A8A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "pokedex2/PokemonListView/PokemonListViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "saveFavoritePokemon()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "71B7D664-580F-47D4-BCD7-3FEBB73A1A8A - d04939682c665a1f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "pokedex2.PokemonListViewModel.saveFavoritePokemon() -&gt; ()"
+                  moduleName = "pokedex2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alejandromendoza/Downloads/pokedex2_/pokedex2/PokemonListView/PokemonListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "960">
+               </Location>
+               <Location
+                  uuid = "71B7D664-580F-47D4-BCD7-3FEBB73A1A8A - d04939682c665a51"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "pokedex2.PokemonListViewModel.saveFavoritePokemon() -&gt; ()"
+                  moduleName = "pokedex2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alejandromendoza/Downloads/pokedex2_/pokedex2/PokemonListView/PokemonListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "65"
+                  endingLineNumber = "65"
+                  offsetFromSymbolStart = "496">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1E4D177C-919E-4D7A-9817-BB3E9E95B626"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "pokedex2/PokemonListView/PokemonListViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
+            landmarkName = "loadFavoritePokemon()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "1E4D177C-919E-4D7A-9817-BB3E9E95B626 - 87809128bd8bc0ff"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "pokedex2.PokemonListViewModel.loadFavoritePokemon() -&gt; ()"
+                  moduleName = "pokedex2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alejandromendoza/Downloads/pokedex2_/pokedex2/PokemonListView/PokemonListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "86"
+                  endingLineNumber = "86"
+                  offsetFromSymbolStart = "848">
+               </Location>
+               <Location
+                  uuid = "1E4D177C-919E-4D7A-9817-BB3E9E95B626 - 87809128bd8bc09c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "pokedex2.PokemonListViewModel.loadFavoritePokemon() -&gt; ()"
+                  moduleName = "pokedex2"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alejandromendoza/Downloads/pokedex2_/pokedex2/PokemonListView/PokemonListViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "83"
+                  endingLineNumber = "83"
+                  offsetFromSymbolStart = "380">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
